@@ -28,6 +28,18 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/example02_01',
     component: () => import('@/views/example02/experiment02_01.vue')
+  },
+  {
+    path: '/example02_02',
+    component: () => import('@/views/example02/example02_02.vue')
+  },
+  {
+    path: '/example02_03',
+    component: () => import('@/views/example02/example02_03.vue')
+  },
+  {
+    path: '/example02_04',
+    component: () => import('@/views/example02/example02_04.vue')
   }
 ]
 const router = createRouter({

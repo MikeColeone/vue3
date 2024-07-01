@@ -14,10 +14,10 @@ export interface User {
 }
 export interface Course {
   id?: number
-  name: string // 名称
+  name?: string // 名称
   createTime?: string
-  term: number // 学期
-  point: number // 学分
+  term?: number // 学期
+  point?: number // 学分
 }
 
 export function listCourses() {
