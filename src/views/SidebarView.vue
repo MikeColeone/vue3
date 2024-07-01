@@ -6,6 +6,16 @@
 
     <br />
 
+    <h1>组合式api</h1>
+    <ul>
+      <li>
+        <router-link to="/example02_01">ref/watch/watchEffect/computed</router-link>
+        <router-link></router-link>
+        <router-link></router-link>
+        <router-link></router-link>
+        <router-link></router-link>
+      </li>
+    </ul>
     <h1>Directive</h1>
     <ul>
       <li>

@@ -4,5 +4,5 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 
-// 调用 使用router组件渲染App组件
+// 调用 使用router组件渲染App
 createApp(App).use(router).mount('#app')
