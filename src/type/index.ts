@@ -37,3 +37,16 @@ export function listCourses() {
   ]
   return courses
 }
+
+//部门接口
+export interface Department {
+  id?: string
+  name?: string
+}
+
+//教师接口
+export interface Teacher {
+  id?: string
+  depId?: string
+  name?: string
+}
