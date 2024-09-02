@@ -20,5 +20,6 @@ const showAbout = () => (aboutR.value = !aboutR.value)
     <about v-if="aboutR" />
   </div>
   <!-- 为社么注释掉br才会正常显示router盒子 -->
+  <!-- 在默认div之外添加标签有可能导致routerview渲染问题 -->
   <!-- <br /> -->
 </template>
