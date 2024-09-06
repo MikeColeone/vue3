@@ -4,7 +4,7 @@
 
 ## Overview
 
-web主流开发框架
+前端主流开发框架
 
 ## Development Enviroments
 
