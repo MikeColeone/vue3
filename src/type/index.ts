@@ -49,4 +49,5 @@ export interface Teacher {
   id?: string
   depId?: string
   name?: string
+  age?: number
 }

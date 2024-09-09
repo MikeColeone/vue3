@@ -1,24 +1,28 @@
 <script setup lang="ts">
 import { defineAsyncComponent, ref, computed } from 'vue'
+import Loading from '@/components/Loading.vue'
 
 // 定义数组，实现异步动态加载
 const components: { name: string; component: ReturnType<typeof defineAsyncComponent> }[] = [
   {
     name: '添加用户',
     component: defineAsyncComponent({
-      loader: () => import('./addUser.vue')
+      loader: () => import('./addUser.vue'),
+      loadingComponent: Loading
     })
   },
   {
     name: '删除用户',
     component: defineAsyncComponent({
-      loader: () => import('./deleteUser.vue')
+      loader: () => import('./deleteUser.vue'),
+      loadingComponent: Loading
     })
   },
   {
     name: '更新用户',
     component: defineAsyncComponent({
-      loader: () => import('./updateUser.vue')
+      loader: () => import('./updateUser.vue'),
+      loadingComponent: Loading
     })
   }
 ]
@@ -33,11 +37,11 @@ const getCurrentComponent = computed(() => {
 // 激活组件时实现切换颜色
 const activeComStyle = computed(() => {
   return (index: number) => {
-    return index === indexComR.value ? { class: 'active' } : { class: 'noActive' }
+    return index === indexComR.value ? 'active' : 'noActive'
   }
 })
 
-// 检查很久没发现问题 原来是这个函数没有return, 太抽象了
+// 检查很久没发现问题 原来是这个函数没有return
 </script>
 
 <template>
@@ -50,7 +54,7 @@ const activeComStyle = computed(() => {
       v-for="(c, index) in components"
       :key="index"
       @click="indexComR = index"
-      :class="activeComStyle(index).class">
+      :class="activeComStyle(index)">
       {{ c.name }}
     </div>
     <p>
