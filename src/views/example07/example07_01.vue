@@ -1,5 +1,16 @@
 <script setup lang="ts">
+// 引入一部分用{}
 import { exampleStore } from './exampleStore'
+const store = exampleStore()
+//此时的store是普通对象
+
+console.log(store)
+//获得的是基本类型
+const countR = store.countS
+console.log(countR)
+
+//响应式修改
+const increase = () => store.countS.value++
 </script>
 <template>
   <div>
@@ -14,6 +25,6 @@ import { exampleStore } from './exampleStore'
     <br />
     {{ countR }} / {{ store.countS }}
     <br />
-    <button @click="increment">increment</button>
+    <button @click="increase">increment</button>
   </div>
 </template>
