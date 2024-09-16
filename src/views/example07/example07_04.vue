@@ -1,4 +1,15 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { exampleStore } from './exampleStore'
+
+const store = exampleStore()
+const changeCountF = () => {
+  store.countS.value++
+}
+
+const changeUserF = () => {
+  store.userS.value = { name: 'sun', address: '1001' }
+}
+</script>
 <template>
   <div>
     <h1>Define Store</h1>
