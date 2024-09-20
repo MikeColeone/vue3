@@ -30,6 +30,10 @@ const routes: RouteRecordRaw[] = [
     component: () => import('@/views/experiment02/experiment02.vue')
   },
   {
+    path: '/experiment03',
+    component: () => import('@/views/experiment03/indexView.vue')
+  },
+  {
     path: '/example02_01',
     component: () => import('@/views/example02/experiment02_01.vue')
   },
@@ -92,6 +96,10 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/homework03',
     component: () => import('@/views/homework03/indexView.vue')
+  },
+  {
+    path: '/homework04',
+    component: () => import('@/views/homework04/indexView.vue')
   }
 ]
 const router = createRouter({

@@ -91,6 +91,9 @@
       <li>
         <router-link to="/experiment02">实验二 Vue双向绑定实验</router-link>
       </li>
+      <li>
+        <router-link to="/experiment03">实验三 单一数据源实验</router-link>
+      </li>
     </ul>
 
     <h1>Homework</h1>
@@ -103,6 +106,9 @@
       </li>
       <li>
         <router-link to="/homework03">作业三 组件封装和暴露属性</router-link>
+      </li>
+      <li>
+        <router-link to="/homework04">作业四 slot插槽</router-link>
       </li>
     </ul>
   </div>
