@@ -110,6 +110,9 @@
       <li>
         <router-link to="/homework04">作业四 slot插槽</router-link>
       </li>
+      <li>
+        <router-link to="/homework05">作业五 函数式全屏Loading遮罩组件</router-link>
+      </li>
     </ul>
   </div>
 </template>

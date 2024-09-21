@@ -42,3 +42,30 @@ export function listTitles() {
   ]
   return titles
 }
+export interface item {
+  id?: String
+  name?: String
+  price?: number
+  number?: number //月销量
+  sale?: number //购入数量
+}
+export interface Shop {
+  id?: String
+  point?: number
+  items?: item[]
+  name?: String
+}
+
+//店铺列表
+export const listShopsMock = async () => {
+  const shops: Shop[] = [
+    { id: '12', name: '必胜客', point: 4.5 },
+    { id: '65', name: '牛肉料理', point: 4.2 },
+    { id: '89', name: '小林炸鸡', point: 4.8 }
+  ]
+  return new Promise<Shop[]>((resolve) => {
+    setTimeout(() => {
+      resolve(shops)
+    }, 1000)
+  })
+}

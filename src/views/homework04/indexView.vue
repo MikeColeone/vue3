@@ -12,12 +12,13 @@ const selectCourseSingleR = ref<Course>()
     <p>当前操作的课程：{{ selectCourseSingleR?.name }}</p>
     <p>
       <course :courses="courses">
+        <template #default>
+          <td>操作</td>
+        </template>
         <template #action="slotProps">
-          <td>
-            <button @click="selectCourseSingleR = slotProps.course" value="slotProps.course">
-              EDIT
-            </button>
-          </td>
+          <button @click="selectCourseSingleR = slotProps.course" value="slotProps.course">
+            EDIT
+          </button>
         </template>
       </course>
     </p>

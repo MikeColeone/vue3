@@ -8,7 +8,7 @@ const props = defineProps<{ courses: Course[] }>()
     <tr>
       <th>#</th>
       <th>课程名称</th>
-      <th>操作</th>
+      <slot></slot>
     </tr>
     <tr v-for="(course, index) of props.courses" :key="index">
       <td>{{ index + 1 }}</td>
