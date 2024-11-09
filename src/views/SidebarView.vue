@@ -114,5 +114,8 @@
         <router-link to="/homework05">作业五 函数式全屏Loading遮罩组件</router-link>
       </li>
     </ul>
+    <ul>
+      <li><router-link to="/practice">练习</router-link></li>
+    </ul>
   </div>
 </template>
