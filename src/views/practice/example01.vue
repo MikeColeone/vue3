@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 import { ref } from 'vue'
 
 const tasks = ref([
@@ -60,4 +60,89 @@ const removeTask = (id) => {
   </div>
 </template>
 
-<style></style>
+<style></style> -->
+
+<!-- <script setup>
+import { ref } from 'vue'
+
+// 使用ref创建响应式数据
+const num1 = ref('')
+const num2 = ref('')
+const result = ref('')
+
+const compare = () => {
+  if (num1.value > num2.value) {
+    result.value = '大于'
+  } else if (num1.value < num2.value) {
+    result.value = '小于'
+  } else {
+    result.value = '等于'
+  }
+}
+</script>
+
+<template>
+  <div>
+    <input type="number" v - model="num1" placeholder="请输入第1个数字：" />
+    <input type="number" v - model="num2" placeholder="请输入第2个数字：" />
+    <button @click="compare">比较</button>
+    <p v - if="result === '大于'">第一个数字大于第二个数字</p>
+    <p v - if="result === '小于'">第一个数字小于第二个数字</p>
+    <p v - if="result === '等于'">两数相等</p>
+  </div>
+</template> -->
+
+<!-- 组件切换 -->
+<!-- <template>
+  <div>
+    <button @click="isLogin = true">登录</button>
+    <button @click="current = Login">登录</button>
+
+    <button @click="isLogin = false">注册</button>
+    <component :is="currentComponent"></component>
+    <component :is="showCom"></component>
+  </div>
+</template>
+
+<script setup>
+import { ref, computed, shallowRef } from 'vue'
+import Login from './Login.vue'
+import Register from './Register.vue'
+
+// 使用ref创建响应式数据
+const isLogin = ref(true)
+
+const current = ref('')
+
+// 使用computed计算属性来决定当前显示的组件
+const currentComponent = computed(() => {
+  return isLogin.value ? Login : Register
+})
+
+const showCom = shallowRef(current)
+</script> -->
+<!-- 
+<script setup lang="ts">
+const name = 'test'
+const obj = {
+  name: 'test',
+  say: function () {
+    console.log(this.name)
+  }
+}
+
+const say2 = function (this: any) {
+  console.log(this.name)
+}
+</script>
+<template>
+  <div>箭头函数</div>
+  <p>
+    箭头函数不会创建自己的this，它的this值从定义它的上下文继承而来。也就是说，箭头函数中的this和它外层代码块中的this是一样的。
+    也就是说箭头函数的this指针不是自己决定的而是却决于定义的上下文
+  </p>
+</template> -->
+<script setup lang="ts"></script>
+<template>
+  <div></div>
+</template>
