@@ -142,7 +142,27 @@ const say2 = function (this: any) {
     也就是说箭头函数的this指针不是自己决定的而是却决于定义的上下文
   </p>
 </template> -->
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const sum = (a: any, b: any, c: any) => {
+  console.log(a + b + c)
+}
+
+// 将函数柯里化
+const curry = (fn: any) => {
+  return function curried(this: any, ...args: any) {
+    if (args.length >= fn.length) {
+      return fn.apply(this, args)
+    } else {
+      return (...args2: any) => {
+        return curried.apply(this, args.concat(args2))
+      }
+    }
+  }
+}
+
+let sumCurry = curry(sum)
+sumCurry(1)(2)(3)
+</script>
 <template>
-  <div></div>
+  <div>函数柯里化</div>
 </template>
