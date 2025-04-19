@@ -117,5 +117,8 @@
     <ul>
       <li><router-link to="/practice">练习</router-link></li>
     </ul>
+    <ul>
+      <li><router-link to="/homework16_01">图片懒加载</router-link></li>
+    </ul>
   </div>
 </template>
