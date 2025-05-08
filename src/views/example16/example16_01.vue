@@ -1,13 +1,12 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 
-// 加载中占位图
-const imgurl = ref(new URL('/src/assets/loading.png', import.meta.url).href)
+// 占位图地址
+const imgUrl = ref(new URL('/src/assets/loading.png', import.meta.url).href)
 
 let observer: IntersectionObserver
 
 onMounted(() => {
-  // 1. 创建 IntersectionObserver 实例
   observer = new IntersectionObserver((entries) => {
     for (const entry of entries) {
       if (entry.isIntersecting) {
@@ -18,7 +17,6 @@ onMounted(() => {
     }
   })
 
-  // 2. 注册所有 lazy-image 类名的图片
   const imgs = document.getElementsByClassName('lazy-image')
   for (const img of Array.from(imgs)) {
     if (img instanceof HTMLImageElement) {
@@ -33,8 +31,22 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div>
-    <!-- 示例图片：需要给实际 src 用 data-src -->
-    <img class="lazy-image" :src="imgurl" data-src="../assets/test01.png" alt="Lazy" />
+  <div class="card" v-for="item in 100" :key="item">
+    <div>
+      <img
+        class="lazy-image"
+        data-src="https://picsum.photos/id/100/400/300?random=1"
+        :src="imgUrl"
+        alt="某网站logo" />
+    </div>
+    <div>
+      <img
+        class="lazy-image"
+        data-src="https://picsum.photos/id/257/400/300?random=2"
+        :src="imgUrl"
+        alt="某网站logo" />
+    </div>
   </div>
+  <div id="loadmore"></div>
 </template>
+<style scoped lang="scss"></style>
