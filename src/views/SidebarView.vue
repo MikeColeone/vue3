@@ -120,5 +120,11 @@
     <ul>
       <li><router-link to="/homework16_01">图片懒加载</router-link></li>
     </ul>
+    <ul>
+      <li><router-link to="/timer">计时器实现</router-link></li>
+    </ul>
+    <ul>
+      <li><router-link to="/myproxy">Proxy代理对象</router-link></li>
+    </ul>
   </div>
 </template>

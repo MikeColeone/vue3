@@ -1,34 +1,29 @@
-# vue-project
+# vue3练习
 
-<hr/>
+## ref、reactive
 
-## Overview
+## mock
 
-## Introduce
+## watch
 
-旨在熟悉vue3的api创建
+## 路由传参
 
-前端主流开发框架
+## v-bind/v-for
 
-## Development Enviroments
+## v-model
 
-开发环境/框架以及版本
+## 异步加载
 
-- VScode
-- Node.js v20.16.0
-- Vue3
-- VueUse
+## keep-alive
 
-## Documents
+## slot
 
-[Homework](./homework.md)
-[Experiment](./experiment.md)
+## 函数时全局遮罩组件
 
-Update
+## 图片懒加载
 
-- 2024.09.13
+## 组件封装和暴露属性
 
-**使用 `async`** 使得 `watch` 回调可以处理异步操作，如获取数据、执行网络请求等。
-**使用 `await`** 可以等待异步操作完成，并将结果赋值给响应式变量，从而确保数据的正确性和完整性。
+## 轮播图
 
-2024.09.02
+## 封装一个倒计时组件

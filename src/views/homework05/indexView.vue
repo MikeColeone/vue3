@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import type { Course } from '@/type'
-import { listCourses } from '@/dataSource/dataSource'
 import { createLoading } from './components/index'
+import { listCoursesService } from '@/service/CoursesService'
 const coursesR = ref<Course[]>([])
 const listCoursesF = async () => {
   // 加载全屏遮罩，返回封装关闭函数的对象供显式调用
   const loading = createLoading()
   try {
-    coursesR.value = await listCourses()
+    coursesR.value = await listCoursesService()
   } finally {
     // 无论请求响应是否异常，均需关闭遮罩。
     loading.close()
@@ -35,3 +35,9 @@ const listCoursesF = async () => {
     </div>
   </div>
 </template>
+
+<style scoped>
+* {
+  padding: 20px;
+}
+</style>
