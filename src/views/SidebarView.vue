@@ -126,5 +126,8 @@
     <ul>
       <li><router-link to="/myproxy">Proxy代理对象</router-link></li>
     </ul>
+    <ul>
+      <li><router-link to="/example19">测试</router-link></li>
+    </ul>
   </div>
 </template>

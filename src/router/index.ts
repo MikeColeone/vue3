@@ -134,6 +134,10 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/myproxy',
     component: () => import('@/views/proxy/indexView.vue')
+  },
+  {
+    path: '/example19',
+    component: () => import('@/views/example19/indexView.vue')
   }
 ]
 const router = createRouter({
